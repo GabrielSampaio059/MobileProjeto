@@ -1,0 +1,7 @@
+{
+  "name": "livraria_atena",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
