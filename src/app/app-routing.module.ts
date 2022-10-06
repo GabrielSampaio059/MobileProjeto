@@ -28,8 +28,8 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'password',
-    loadChildren: () => import('./password/password.module').then( m => m.PasswordPageModule)
+    path: 'password-reset',
+    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
 ];
 

@@ -7,6 +7,8 @@ import {
   AngularFirestore,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -39,11 +41,12 @@ export class AuthenticationService {
   }
   // Email verification when new user register
   SendVerificationMail() {
-    return this.ngFireAuth.auth.currentUser.sendEmailVerification()
-    .then(() => {
-      this.router.navigate(['verify-email']);
-    })
-  }
+    return this.ngFireAuth.currentUser.then((user) => {
+      return user.sendEmailVerification().then(() => {
+        this.router.navigate(['login']);
+      });
+    });
+  } //this.ngFireAuth.auth.currentUser.sendEmailVerification()
   // Recover password
   PasswordRecover(passwordResetEmail) {
     return this.ngFireAuth
