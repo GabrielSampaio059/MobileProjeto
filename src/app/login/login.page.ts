@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
         if (this.authService.isEmailVerified) {
           window.alert('Email verificado');
         } else {
-          window.alert('Email não verified')
+          window.alert('Email não verificado')
           return false;
         }
       }).catch((error) => {

@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   constructor(
     private navCtrl: NavController,
     private alertCtrl: AlertController,
-    private authService:  AuthenticationService
+    private authService:  AuthenticationService,
     ) { }
   ngOnInit() {
 
@@ -51,7 +51,13 @@ export class HomePage implements OnInit {
   }
   showPerfil() {
     this.navCtrl.navigateForward('perfil');
-
   }
 
+  ionViewWillEnter() {
+    if (!this.authService.isLoggedIn) {
+      this.navCtrl.navigateForward('login')
+    } else {
+      return true;
+    }
+  }
 }
