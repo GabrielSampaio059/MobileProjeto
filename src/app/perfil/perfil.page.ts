@@ -27,12 +27,12 @@ export class PerfilPage implements OnInit {
 
   async showAlert() {
     const alert = await this.alertCtrl.create({
-      header: 'Alterar dados',
+      header: 'Alterar nome',
       inputs: [
         {
           name: 'nome',
           type: 'text',
-          placeholder: 'Digite a tarefa...'
+          placeholder: 'Digite o nome...'
         }
       ],
       buttons: [
@@ -50,7 +50,43 @@ export class PerfilPage implements OnInit {
 
             console.log(form.nome);
             this.usuario.displayName = form.nome;
-            localStorage.setItem('user.displayName', JSON.stringify(form.nome));
+           // localStorage.setItem('user.displayName', JSON.stringify(form.nome));
+            localStorage.setItem('user', JSON.stringify(this.usuario));
+          }
+        } 
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async mostraAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Alterar foto',
+      inputs: [
+        {
+          name: 'url_photo',
+          type: 'text',
+          placeholder: 'Insira a URL...'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('clicked cancel')
+          }
+        },
+        {
+          text: 'Alterar',
+          handler: (form) => {
+
+            console.log(form.url_photo);
+            this.usuario.photoURL = form.url_photo;
+           // localStorage.setItem('user.displayName', JSON.stringify(form.nome));
+            localStorage.setItem('user', JSON.stringify(this.usuario));
           }
         } 
       ]

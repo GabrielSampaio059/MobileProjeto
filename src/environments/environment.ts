@@ -7,7 +7,7 @@ export const environment = {
   firebaseConfig: {
       apiKey: "AIzaSyDL691LfkYjTNpoL3kUSSgcgHxKcHqNKRs",
       authDomain: "livraria-atena.firebaseapp.com",
-      databaseURL: "https://console.firebase.google.com/u/0/project/livraria-atena/firestore/data/~2Fteste~2F6TO6Kr7Q26sWGoFu0XgF",
+      databaseURL: "https://livraria-atena-default-rtdb.firebaseio.com",
       projectId: "livraria-atena",
       storageBucket: "livraria-atena.appspot.com",
       messagingSenderId: "534327391145",
