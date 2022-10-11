@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { AlertController, NavController } from '@ionic/angular';
 import { userInfo } from 'os';
 import { User } from '../shared/user';
+=======
+import { NavController } from '@ionic/angular';
+
+>>>>>>> 2d8cafbaac9b597a80ea3200fe96035a5182b91f
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
@@ -9,6 +14,7 @@ import { User } from '../shared/user';
 })
 export class PerfilPage implements OnInit {
 
+<<<<<<< HEAD
   usuario: any;
 
   constructor(
@@ -21,10 +27,14 @@ export class PerfilPage implements OnInit {
       this.usuario = JSON.parse(usu);
     }
   }
+=======
+  constructor(private nv: NavController) { }
+>>>>>>> 2d8cafbaac9b597a80ea3200fe96035a5182b91f
 
   ngOnInit() {
   }
 
+<<<<<<< HEAD
   async showAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Alterar nome',
@@ -98,4 +108,10 @@ export class PerfilPage implements OnInit {
   goHome(){
     this.nv.navigateBack('home');
   }
+=======
+  voltar(){
+    this.nv.navigateBack('home');
+  }
+
+>>>>>>> 2d8cafbaac9b597a80ea3200fe96035a5182b91f
 }

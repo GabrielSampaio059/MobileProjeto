@@ -32,6 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
   {
+<<<<<<< HEAD
     path: 'edit-appointment',
     loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
   },
@@ -43,12 +44,20 @@ const routes: Routes = [
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
+=======
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+>>>>>>> 2d8cafbaac9b597a80ea3200fe96035a5182b91f
     path: 'produtos',
     loadChildren: () => import('./produtos/produtos.module').then( m => m.ProdutosPageModule)
   },
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2d8cafbaac9b597a80ea3200fe96035a5182b91f
 ];
 
 @NgModule({
