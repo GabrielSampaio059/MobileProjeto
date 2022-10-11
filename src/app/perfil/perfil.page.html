@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>{{usuario.displayName}}</ion-label>
+  </ion-item>
+  <ion-button (click) = showAlert()>
+    Alterar nome
+  </ion-button>
+  <ion-item>
+    <ion-label>{{usuario.email}}</ion-label>
+  </ion-item>
+</ion-content>

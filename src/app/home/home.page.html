@@ -1,31 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Doctors App
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title slot="start"> Home </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="showPerfil()">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="showProdutos()">
+        <ion-icon slot="icon-only" name="book"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentAlert()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-list class="ios list-ios hydrated">
-    <ion-list-header class="ios hydrated">
-      Appointments
-    </ion-list-header>
-    <ion-item *ngFor="let booking of Bookings" class="user-list">
-      <ion-label>
-        <h5>
-          <ion-icon name="person"></ion-icon> {{booking.name}}
-        </h5>
-        <p>
-          <ion-icon name="call"></ion-icon> {{booking.mobile}}
-        </p>
-      </ion-label>
-      <div class="item-note" item-end>
-        <button ion-button clear [routerLink]="['/edit-appointment/', booking.$key]">
-          <ion-icon name="create" style="zoom:2.0"></ion-icon>
-        </button>
-        <button ion-button clear (click)="deleteBooking(booking.$key)">
-          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
-        </button>
-      </div>
-    </ion-item>
-  </ion-list>
+

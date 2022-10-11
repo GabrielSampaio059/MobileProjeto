@@ -30,17 +30,15 @@ export class LoginPage implements OnInit {
         window.alert(error.message)
       })
   }
-  ionViewDidEnter() {
-    this.storage.get('user')
-      .then((resolve) => {
-        if (resolve.length > 0) {
-          this.nav.navigateForward('home');
-        } else {
-          return true;
-        }
-      })
-      .catch((error) => {
-        return true;
-      })
+  ionViewWillEnter() {
+    if (this.authService.isLoggedIn) {
+      this.nav.navigateForward('home')
+    } else {
+      return true;
+    }
+  }
+
+  goRegistration(){
+    this.nav.navigateForward('registration');
   }
 }

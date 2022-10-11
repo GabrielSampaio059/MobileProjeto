@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Sign in User</ion-title>
+    <ion-title> Livraria Atena </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -26,7 +26,7 @@
         >
       </ion-col>
     </ion-row>
-    <span class="divider line one-line">or</span>
+
     <ion-row>
       <ion-col>
         <ion-button
@@ -36,6 +36,19 @@
           expand="block"
         >
           Login with Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+          type="submit"
+          color="secondary"
+          (click)="goRegistration()"
+          expand="block"
+        >
+          Registrar
         </ion-button>
       </ion-col>
     </ion-row>
